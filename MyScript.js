@@ -182,8 +182,8 @@ const projects = () => {
         display();
         clicked = true;
         
-        let arr = ['concert']
-        let link = ['Concet/Concert.html']
+        let arr = ['concert','login-panel']
+        let link = ['Concet/Concert.html','login/login.html']
         
         if(windowSize.matches)
         screen.style.width = '50%'
