@@ -1,4 +1,6 @@
-var windowSize = window.matchMedia("(max-width: 500px)")
+const windowWidth = window.matchMedia("(max-width: 768px)")
+const windowHeight =window.matchMedia("(min-height: 768px)")
+
 const paragraphs = ['My name is Thapelo Petrick Sikhosana born In 1990 June 7.One thing I love to Do is to write code, play around With different, and Try out New libraries that come out.I am still New to programming and still have along way to go, but i dont mind doing the hard work.',
 'I have been doing some few courses online, and tearching my self some New languages. Freecodecamp is one of the website that real helped me alot.It gave me a starting ground or a flour to starnd on.',
 'I was introducing to programming in the year 2014 when I was doing my learnership programme, And I kind of fell in love with. At first we were introduce to java langauge, But never got the certificate for it. So I started doing some research on programming found that the are more programming langauges out the.',
@@ -46,14 +48,26 @@ const bioInfor = () => {
     {
         clicked = true;
     display()
-         
+        
+                         
+        if(windowWidth.matches || windowHeight.matches)
+        {
+            screen.style.width = '62vw'
+        screen.style.height = '70%'
+        }
+        
+        else{
+            screen.style.width = '36vw'
+        screen.style.height = '70%'
+        }
+
+        
     for(let i = 0; i < labels.length; i++){
         
         let holder = document.createElement('div');
         holder.setAttribute('class', 'variable-value');
-        holder.style.width = '85%'
-        screen.style.width = '55vw'
-     
+        holder.style.width = '82%'
+        
         const label = document.createElement('h4');
         const answerLabel = document.createElement('h4');
         label.innerText = labels[i] + '   :    ';
@@ -111,6 +125,15 @@ const about = () => {
         display();
         clicked = true;
         
+        if(windowWidth.matches || windowHeight.matches)
+        {
+            screen.style.width = '68%'
+            screen.style.height = '73%'
+        }
+        else{
+        screen.style.width = '60%'
+        screen.style.height = '50%';
+        }
             for	(let i = 0; i < paragraphs.length; i++){
                 
                 
@@ -130,6 +153,8 @@ const service = () => {
         display()
         
         clicked = true;
+        
+        screen.style.width = '60%'
         
         let arr = ['Design responsive web pages using HTML, CSS and JAVASCRIPT.', 'Build a database using BASH SHELL and POSTGRES','Use REACT and REDUX to build working applications.','Build frame work applications using C-SHARP (c#)']
         
@@ -155,6 +180,16 @@ const edu = () => {
     {
         display()
         clicked = true;
+        
+        if(windowWidth.matches || windowHeight.matches){
+            
+            screen.style.width ='55%'
+            screen.style.height = '72%'
+        }
+        else{
+        screen.style.height = '50%';
+        screen.style.width = '55%';
+        }
         
         let qaulifications = ['Matric Certificate', 'Information Technology Certificate +A and +N','C# programming Certificate','Internship Programme Certificate (Technical support +A)','FreeCodeCamp Certificates']
         
@@ -185,11 +220,17 @@ const projects = () => {
         let arr = ['concert','login-panel']
         let link = ['Concet/Concert.html','login/login.html']
         
-        if(windowSize.matches)
-        screen.style.width = '50%'
+        if(windowWidth.matches){
+            
+            screen.style.width = '50%'
+            screen.style.height = '40%'
+        }
         
-        else
-        screen.style.width = '20%';
+        else{
+            
+            screen.style.width = '35%';
+            screen.style.height = '30%'
+        }
         
         for(let i = 0; i < arr.length; i++){
             let page = document.createElement('a')
