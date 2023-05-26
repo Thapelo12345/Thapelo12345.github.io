@@ -14,23 +14,32 @@
 #contact-screen{
   visibility: hidden;
   background-color: rgba(30, 69, 80,0.7);
-  box-shadow: 4px 2px 34px cyan; 
-  width: 40vw;
-  height: 64vh;
+  box-shadow: 4px 2px 34px cyan;
   position: fixed;
   left: 30%;
-  bottom: 35%;
+  bottom: 20%;
   border-radius: 6%;
   z-index: 2;
 }
 @media screen and (max-width: 768px) {
-  
   #contact-screen{
     position: fixed;
-    bottom: 72%;
-    left: 18%;
-    width: 75vw;
-    height: 25vh;
+    top: 0;
+    bottom: 80%;
+    left: 0;
+    right: 0;
+    
+    border-radius: 6%;
+  }
+}
+@media screen and (min-height: 768px) {
+  #contact-screen{
+    position: fixed;
+    top: 0;
+    bottom: 76%;
+    left: 20%;
+    right: 0;
+    
     border-radius: 6%;
   }
 }
@@ -224,7 +233,6 @@ menu{
   width: 29%;
   border-radius: 7%;
   background-color: rgb(19, 60, 67);
-  box-shadow: -7px 1px 7px linear-gradient(20deg lime cyan);
   text-shadow: -2px 0px 0px purple;
   transform: rotateY(40deg);
   }

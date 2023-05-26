@@ -90,6 +90,16 @@ const contactInfor = () => {
         clicked = true;
         screen2.style.visibility = 'visible';
         
+        if(windowWidth.matches || windowHeight.matches){
+            
+            screen2.style.width = '31%'
+            screen2.style.height = '17%'
+        }
+        else{
+            screen2.style.width = '30%'
+            screen2.style.height = '70%'
+        }
+        
         for(let i = 0; i < lab.length; i++){
             let text = document.createElement('h3');
             //text.setAttribute('class','variable-value')
