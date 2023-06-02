@@ -134,7 +134,6 @@ margin: 10%;
 
 header{
   width: auto;
- /* perspective: 320px;*/
 }
 
 #main-header{
@@ -160,19 +159,18 @@ header{
            text-align: center;
          }
 }
-menu{
+#nav-header{
   display: flex;
   flex-flow: row;
   background-color: rgb(19, 60, 67);
-  box-shadow: -2px 4px 55px black;
+  /*box-shadow: -2px 4px 55px black;*/
   width: 80%;
   height: 15vh;
   margin-left: 7%;
-  padding-left: 5%
-  transform: perspective(2250px) rotateX(40deg);
+  padding-left: 1%;
 }
 @media screen and (min-height: 768px) {
-  menu{
+  #nav-header{
   display: flex;
   flex-flow: row;
   background-color: rgb(19, 60, 67);
@@ -181,11 +179,11 @@ menu{
   height: 5vh;
   margin-left: 7%;
   padding-left: 5%
-  transform: perspective(2250px) rotateX(40deg);
+  
 }
 }
 @media screen and (max-width: 768px) {
-  menu{
+  #nav-header{
   display: flex;
   flex-flow: row;
   background-color: rgb(19, 60, 67);
@@ -194,8 +192,6 @@ menu{
   height: 5vh;
   margin-left: 3%;
   padding-left: 2%;
-    transform: perspective(2250px) rotateX(40deg);
-  
 }
 }
 
@@ -203,14 +199,15 @@ menu{
   position: relative;
   bottom: 5%;
   font-family: myfont1;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   margin-left: 13%;
   z-index: 1;
+  border: 1px solid white;
   color: steelblue;
   border-radius: 7%;
   background-color: rgb(19, 60, 67);
-  box-shadow: -5px 4px 17px cyan;
-  transform: perspective(1250px) rotateY(40deg);
+  box-shadow: -2px 2px 10px aqua, -1px 2px 5px white;
+  transform: perspective(1250px) rotateY(55deg);
   animation-name: move;
   animation-duration: 11s;
   animation-iteration-count: 1;
@@ -218,7 +215,7 @@ menu{
 }
 
 .menu-button:hover {
-  transform: rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg);
   box-shadow: -16px 3px 33px 36px lime;
   z-index: 2;
   border: 2px solid lime;
@@ -244,6 +241,7 @@ img{
   height: 35%;
   position: relative;
   left: 35%;
+ -webkit-box-reflect: below 2px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
   animation-name: roll-in;
   animation-duration: 5s;
   animation-iteration-count: 1;
@@ -251,7 +249,7 @@ img{
 }
 
 img:hover {
-  transform: rotateY(45deg);
+  transform: perspective(1205px) rotateY(45deg);
 }
 
 @media screen and (max-width: 768px) {
@@ -269,19 +267,20 @@ main{
   margin-top: 25px;
   width: 73%;
   height: 50%;
-  perspective: 250px;
+  /*perspective: 250px;*/
 }
 
-nav{
+#link-nav{
   position:absolute;
-  left: 97%;
+  left: 62%;
   display: flex;
   flex-flow: column;
   width: 35vw;
+  -webkit-box-reflect: below 2px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
   overflow: hidden;
 }
 @media screen and (max-width: 768px){
-  nav{
+  #link-nav{
     position:absolute;
   left: 83%;
   display: flex;
@@ -330,7 +329,7 @@ a{
   margin-top: 4%;
   width: 58%;
   height: 81%;
-  transform: rotateX(20deg) skewX(40deg);
+  transform: perspective(250px) rotateX(20deg) skewX(40deg);
 }
 
 #screen{
@@ -412,6 +411,7 @@ a{
   font-family: myfont2;
   font-size: 1.5rem;
   background-color: rgb(19, 60, 67);
+  transform: rotateX(50deg);
   transition-duration: 2s;
 }
 
@@ -678,60 +678,70 @@ a{
     translate: -580px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   1%{
     rotate: -310deg;
     translate: -560px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   3%{
     rotate: -300deg;
     translate: -540px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   4%{
     rotate: -290deg;
     translate: -520px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   5%{
     rotate: -280deg;
     translate: -500px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   6%{
     rotate: -270deg;
     translate: -480px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   7%{
     rotate: -260deg;
     translate: -460px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   8%{
     rotate: -250deg;
     translate: -440px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   9%{
     rotate: -240deg;
     translate: -420px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   10%{
     rotate: -220deg;
     translate: -400px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   
   11%{
@@ -739,123 +749,144 @@ a{
     translate: -380px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   12%{
     rotate: -200deg;
     translate: -360px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   13%{
     rotate: -190deg;
     translate: -340px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   14%{
     rotate: -180deg;
     translate: -320px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   15%{
     rotate: -170deg;
     translate: -300px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   16%{
     rotate: -160deg;
     translate: -280px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   17%{
     rotate: -150deg;
     translate: -260px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   18%{
     rotate: -140deg;
     translate: -240px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   19%{
     rotate: -130deg;
     translate: -220px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   20%{
     rotate: -120deg;
     translate: -200px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   21%{
     rotate: -110deg;
     translate: -200px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   22%{
     rotate: -100deg;
     translate: -180px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   23%{
     rotate: -90deg;
     translate: -160px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   24%{
     rotate: -80deg;
     translate: -140px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   25%{
     rotate: -70deg;
     translate: -120px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   26%{
     rotate: -60deg;
     translate: -100px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   27%{
     rotate: -50deg;
     translate: -80px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   28%{
     rotate: -40deg;
     translate: -60px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   29%{
     rotate: -20deg;
     translate: -40px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   30%{
     rotate: -10deg;
     translate: -20px 0px;
     border-radius: 50%;
     z-index: 1;
+    -webkit-box-reflect: none;
   }
   31%{
     rotate: 0deg;
     translate: 0px 0px;
+    -webkit-box-reflect: none;
   }
 }

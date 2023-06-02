@@ -28,6 +28,10 @@ const back = () => {
     screen.style.visibility = 'hidden';
     screen2.style.visibility = 'hidden';
     
+    
+      screen.style.bottom = '5%';
+      screen.style.top = '2%';
+    
     clicked = false;
     
     for(let j = screen.childNodes.length - 1; j > 1; j--)
@@ -242,6 +246,9 @@ const projects = () => {
             screen.style.height = '30%'
         }
         
+        screen.style.bottom = '0%';
+        screen.style.top = '30%';
+        
         for(let i = 0; i < arr.length; i++){
             let page = document.createElement('a')
     
@@ -258,7 +265,7 @@ const projects = () => {
 
 //starting 
 
-const navBar = document.querySelector('nav')
+const navBar = document.querySelector('#link-nav')
 
 let facebook = document.querySelector('#facebook')
     let linkedin = document.querySelector('#linkedin')
