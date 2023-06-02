@@ -163,12 +163,13 @@ header{
   display: flex;
   flex-flow: row;
   background-color: rgb(19, 60, 67);
-  /*box-shadow: -2px 4px 55px black;*/
+  box-shadow: -2px 4px 55px black;
   width: 80%;
   height: 15vh;
   margin-left: 7%;
   padding-left: 1%;
 }
+
 @media screen and (min-height: 768px) {
   #nav-header{
   display: flex;
