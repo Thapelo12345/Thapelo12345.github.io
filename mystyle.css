@@ -110,7 +110,7 @@ body{
   background-repeat: none-repeat;
   /*background-size: 20%;*/
   width: calc(100% - 6px);
-  height: calc(100% - 17px);
+  height: calc(100% - 27px);
   z-index: -1;
   transition-duration: 2s;
   animation-name: backg-play;
