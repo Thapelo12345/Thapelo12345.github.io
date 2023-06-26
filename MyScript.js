@@ -37,6 +37,18 @@ main.addEventListener('mouseout', () =>{
     
 })
 
+mainButtons.forEach((item) => {{
+    item.addEventListerner('mouseover', () =>{
+            main.style.boxShadow = '-4px 1px 3px aqua';
+    main.style.transitionDuration = '1s';
+    })
+    
+    item.addEventListerner('mouseout', () =>{
+            main.style.boxShadow = 'none';
+    main.style.transitionDuration = '1s';
+    })
+}})
+
 var clicked = false;
 const labels = ['Name', 'Surname', 'Age', 'Race','Nationality', 'Criminal Record', 'Marital status', 'Kids']
 const answers = ['Thapelo Petrick', 'Sikhosana', '33', 'Black', 'South African', 'None', 'Single', 'None']
