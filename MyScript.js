@@ -74,19 +74,19 @@ const services = () =>{
         if(h.matches){
             
             screen.style.width = '40%';
-            screen.style.height = '47%';
+            screen.style.height = '52%';
             
         }//end of hieght if statement
         
         else if(w.matches){
             
           screen.style.height = '70%';
-            screen.style.width = '60%'
+            screen.style.width = '65%'
         }//end of else if statement
         
         else{
         screen.style.width = '40%';
-        screen.style.height = '49%'
+        screen.style.height = '53%'
         }//end of else 
         
         screen.style.top = '5px';
@@ -96,7 +96,8 @@ const services = () =>{
         list.style.color = 'white';
         screen.append(list);
         
-        let arr = ['Design responsive web pages using HTML, CSS and JAVASCRIPT.', 'Build a database using BASH SHELL and POSTGRES','Use REACT and REDUX to build working applications.','Build frame work applications using C-SHARP (c#)']
+        let arr = ['Design responsive web pages using HTML, CSS and JAVASCRIPT.', 'Build a database using POSTGRES or SQL','Use REACT ,REDUX and REACT-DOM to build UI applications.','Build frame work applications using C-SHARP (c#)',
+        'Use jquery', 'use node js to build web server applications.']
         let i = 0;
         
         let item = document.createElement('li');
@@ -124,7 +125,7 @@ const services = () =>{
                 clearInterval(myPlay);
             }//end of else statement
             
-        }, 1000)
+        }, 957)
         
        //screen.append(document.querySelector('#back')) 
     }//end if clicked
