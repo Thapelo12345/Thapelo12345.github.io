@@ -1,5 +1,5 @@
-const windowWidth = window.matchMedia("(max-width: 768px)")
-const windowHeight =window.matchMedia("(min-height: 768px)")
+const h = window.matchMedia('(min-height: 768px)');
+const w = window.matchMedia('(max-width: 768px)');
 
 const paragraphs = ['My name is Thapelo Petrick Sikhosana born In 1990 June 7.One thing I love to Do is to write code, play around With different, and Try out New libraries that come out.I am still New to programming and still have along way to go, but i dont mind doing the hard work.',
 'I have been doing some few courses online, and tearching my self some New languages. Freecodecamp is one of the website that real helped me alot.It gave me a starting ground or a flour to starnd on.',
@@ -7,45 +7,210 @@ const paragraphs = ['My name is Thapelo Petrick Sikhosana born In 1990 June 7.On
 'When I was doing my research online, I found c-sharp langauge which was similar to java. And found a college that offered the certificat for introduction to c# programmong langauge, which did and completed with flying colours.'];
 
 let body = document.querySelector('body')
+const screen = document.querySelector('#screen');
 
-let screen2 = document.createElement('div');
-screen2.setAttribute('id','contact-screen');
+const close = document.createElement('button')
+close.setAttribute('id', 'back')
+close.innerText = 'Back';
+
+const main = document.querySelector('#main-display');
+const mainButtons = document.querySelectorAll(".display-button")
+
+main.addEventListener('mouseover', () =>{
+    main.style.boxShadow = '-4px 1px 3px aqua';
+    main.style.transitionDuration = '1s';
     
+    mainButtons.forEach((item) =>{ 
+    item.style.boxShadow = '-1px 1px 3px aqua';
+        item.style.transitionDuration = '1s';
+    })//end of each loop
+})
+main.addEventListener('mouseout', () =>{
+    
+    main.style.transitionDuration = '1s';
+    main.style.boxShadow = 'none';
+    
+    mainButtons.forEach((item) =>{
+    item.style.boxShadow = 'none';
+    item.style.transition = '1s';
+})//end of each loop
+    
+})
 
 var clicked = false;
 const labels = ['Name', 'Surname', 'Age', 'Race','Nationality', 'Criminal Record', 'Marital status', 'Kids']
 const answers = ['Thapelo Petrick', 'Sikhosana', '33', 'Black', 'South African', 'None', 'Single', 'None']
 
-const screen = document.querySelector('#screen');
-
-const display = () => {
+//starting display function
+const display = () =>{
     screen.style.visibility = 'visible'
 }//end of display method
 
-
-const back = () => {
+//starting screen closing function
+close.onclick = () =>{
     
+    
+    close.style.transitionDuration = '0s';
+    close.style.visibility = 'hidden';
     screen.style.visibility = 'hidden';
-    screen2.style.visibility = 'hidden';
-    
-    
-      screen.style.bottom = '5%';
-      screen.style.top = '2%';
-    
     clicked = false;
     
-    for(let j = screen.childNodes.length - 1; j > 1; j--)
+    //screen.removeChild(screen.childNodes[j]);
+    
+    while(screen.childNodes.length != 0){
+        screen.removeChild(screen.childNodes[0]);
+    }//end of while loop
+    
+}//end of screen closing function
+
+
+const services = () =>{
+    
+    if(!clicked){
+        display()
+        
+        clicked = true;
+        
+        if(h.matches){
+            
+            screen.style.width = '40%';
+            screen.style.height = '47%';
+            
+        }//end of hieght if statement
+        
+        else if(w.matches){
+            
+          screen.style.height = '70%';
+            screen.style.width = '60%'
+        }//end of else if statement
+        
+        else{
+        screen.style.width = '40%';
+        screen.style.height = '49%'
+        }//end of else 
+        
+        screen.style.top = '5px';
+        screen.style.left = '2%';
+        
+        let list = document.createElement('ol');
+        list.style.color = 'white';
+        screen.append(list);
+        
+        let arr = ['Design responsive web pages using HTML, CSS and JAVASCRIPT.', 'Build a database using BASH SHELL and POSTGRES','Use REACT and REDUX to build working applications.','Build frame work applications using C-SHARP (c#)']
+        let i = 0;
+        
+        let item = document.createElement('li');
+                item.style.marginBottom = '20px';
+                item.innerText = arr[i]
+                i++;
+                list.append(item);
+        
+        let myPlay = setInterval(() =>{
+            if(i < arr.length){
+                
+                let item = document.createElement('li');
+                item.style.marginBottom = '20px';
+                item.innerText = arr[i]
+                i++;
+                list.append(item);
+                list.style.transitionDuration = '2s'
+                
+            }//end of if statement
+            
+            else{
+                close.style.marginLeft = '43%';
+                screen.append(close);
+                close.style.visibility = 'visible';
+                clearInterval(myPlay);
+            }//end of else statement
+            
+        }, 1000)
+        
+       //screen.append(document.querySelector('#back')) 
+    }//end if clicked
+    
+}//end service function
+
+
+const contactInfor = () =>{
+    var lab = ['Email Address : pmanskhosana@gmail.com', 'Cellphone Number : 063 893 7422', 'Other Cellphone Number : 067 087 1575'];
+    
+    if(!clicked)
     {
-        screen.removeChild(screen.childNodes[j]);
-    }//end of first 4 loop
+        clicked = true;
+        display();
+        
+     							if(w.matches){
+     							    
+     							    screen.style.left = '10%';
+        screen.style.top = '12px';
+     							    
+     							screen.style.height = '56%';
+        screen.style.width = '76%';    
+     							    
+     							}//end of if   
+        else{
+            
+            screen.style.left = '30%';
+        screen.style.top = '12px';
+            
+            screen.style.height = '43%';
+        screen.style.width = '40%';
+            
+        }//end of else statement
+        
+        for(let i = 0; i < lab.length; i++){
+            
+           let text = document.createElement('h3')
+            text.innerText = lab[i];
+            text.style.color = 'white';
+            text.style.marginLeft = '3%';
+            screen.append(text);
+            
+        }//end of 4 loop
+        
+        close.style.visibility = 'visible';
+        close.style.marginLeft = '40%';
+        screen.append(close);
+        
+    }//end of if statement
     
-    for(let j = screen2.childNodes.length - 1; j > 1; j--)
+}//end of contact infor function
+
+const about = () =>{
+    if (!clicked)
     {
-        screen.removeChild(screen2.childNodes[j]);
-    }//end of second 4 loop
-    
-    
-}//end of back function
+        display();
+        clicked = true;
+        
+        if(w.matches){
+            
+            screen.style.height = '97%'
+            screen.style.width = '80%'
+            
+        }//end if 
+        
+        else{
+        screen.style.width = '64%'
+        screen.style.height = '52%';
+        }//end of else
+        
+        screen.style.top = '2%';
+        screen.style.left = '10%';
+        
+            for	(let i = 0; i < paragraphs.length; i++){
+                
+             let para = document.createElement('p');
+                para.setAttribute('id', 'about')
+                para.innerText = paragraphs[i];
+                screen.append(para);
+            }//end of 4 loop
+        
+        close.style.visibility = 'visible';
+        close.style.marginLeft = '40%';
+        screen.append(close);
+    }
+}//end about function
 
 const bioInfor = () => {
     if(!clicked)
@@ -53,16 +218,23 @@ const bioInfor = () => {
         clicked = true;
     display()
         
-                         
-        if(windowWidth.matches || windowHeight.matches)
-        {
-            screen.style.width = '62vw'
-        screen.style.height = '70%'
+        if(w.matches){
+            screen.style.width = '56vw'
+        screen.style.height = '120%'
         }
         
+        else if(h.matches){
+            
+            screen.style.width = '56vw'
+        screen.style.height = '75%'
+            
+        }//end of if else
         else{
             screen.style.width = '36vw'
         screen.style.height = '70%'
+            
+            screen.style.top = '25%';
+            screen.style.left = '2%'  
         }
 
         
@@ -73,136 +245,48 @@ const bioInfor = () => {
         holder.style.width = '82%'
         
         const label = document.createElement('h4');
+        
         const answerLabel = document.createElement('h4');
         label.innerText = labels[i] + '   :    ';
         answerLabel.innerText = answers[i];
         holder.append(label, answerLabel);
+        
         //holder.append(answerLabel);
         
         
-        screen.append(holder)
-    }
+        screen.append(holder);
+        
+    }//end of 4 loop
+        
+        close.style.visibility = 'visible';
+        close.style.marginLeft = '40%'
+        screen.append(close);
     }
 }
 
-const contactInfor = () => {
-    var lab = ['Email Address : pmanskhosana@gmail.com', 'Cellphone Number : 063 893 7422', 'Other Cellphone Number : 067 087 1575'];
-    
-    
-    if(!clicked)
-    {
-        clicked = true;
-        screen2.style.visibility = 'visible';
-        
-        if(windowWidth.matches || windowHeight.matches){
-            
-            screen2.style.width = '31%'
-            screen2.style.height = '17%'
-        }
-        else{
-            screen2.style.width = '30%'
-            screen2.style.height = '70%'
-        }
-        
-        for(let i = 0; i < lab.length; i++){
-            let text = document.createElement('h3');
-            //text.setAttribute('class','variable-value')
-            
-            text.innerText = lab[i];
-            screen2.append(text);
-        }//end of 4 loop
-        
-        let close = document.createElement('button');
-        close.setAttribute('id', 'close-back');
-        close.innerText = 'Back';
-        close.onclick = () => {
-            
-            screen2.style.visibility = 'hidden';
-            clicked = false;
-            
-            while(screen2.firstChild){
-                screen2.removeChild(screen2.firstChild)
-            }//end of while loop
-        }//end of inline function
-        
-        screen2.append(close)
-        body.append(screen2);
-        
-    }
-}//end of contact infor function
-
-
-
-const about = () => {
-    if (!clicked)
-    {
-        display();
-        clicked = true;
-        
-        if(windowWidth.matches || windowHeight.matches)
-        {
-            screen.style.width = '68%'
-            screen.style.height = '73%'
-        }
-        else{
-        screen.style.width = '60%'
-        screen.style.height = '50%';
-        }
-            for	(let i = 0; i < paragraphs.length; i++){
-                
-                
-             let para = document.createElement('p');
-                para.setAttribute('id', 'about')
-                let liner = document.createElement('br');
-                para.innerText = paragraphs[i];
-                screen.append(para);
-                screen.append(liner);
-                
-            }
-    }
-}//end about function
-
-const service = () => {
-    if(!clicked){
-        display()
-        
-        clicked = true;
-        
-        screen.style.width = '60%'
-        
-        let arr = ['Design responsive web pages using HTML, CSS and JAVASCRIPT.', 'Build a database using BASH SHELL and POSTGRES','Use REACT and REDUX to build working applications.','Build frame work applications using C-SHARP (c#)']
-        
-        for(let i = 0; i < arr.length; i++){
-            
-            let holder = document.createElement('div');
-        holder.setAttribute('class', 'variable-value');
-   
-            
-            let Text = document.createElement('h4');
-            Text.innerText = arr[i];
-            
-            holder.append(Text);
-            screen.append(holder);
-        }//end of 4 loop
-        
-    }//end if clicked
-}//end service line function
-
 //start of edu function
-const edu = () => {
-    if(!clicked)
+const edu = () =>{
+if(!clicked)
     {
         display()
         clicked = true;
         
-        if(windowWidth.matches || windowHeight.matches){
+        
+        if(w.matches){
             
-            screen.style.width ='55%'
-            screen.style.height = '72%'
+            screen.style.width ='76%'
+            screen.style.height = '82%'
+            
+            screen.style.top = '13px';
+        screen.style.left = '15%';
         }
         else{
-        screen.style.height = '50%';
-        screen.style.width = '55%';
+        screen.style.height = '53%';
+        screen.style.width = '48%';
+            
+         screen.style.top = '180px';
+        screen.style.left = '15%';
+            
         }
         
         let qaulifications = ['Matric Certificate', 'Information Technology Certificate +A and +N','C# programming Certificate','Internship Programme Certificate (Technical support +A)','FreeCodeCamp Certificates']
@@ -212,7 +296,6 @@ const edu = () => {
         let holder = document.createElement('div');
         holder.setAttribute('class', 'variable-value');
         
-        
         let header = document.createElement('h4');
         header.setAttribute('class', 'education');
         
@@ -221,6 +304,11 @@ const edu = () => {
         screen.append(holder);
         
     }//end of 4 loop	
+        
+        close.style.visibility = 'visible'
+        close.style.marginLeft = '40%';
+        screen.append(close);
+        
     }// of if statement
 }//end of edu function
 
@@ -234,20 +322,25 @@ const projects = () => {
         let arr = ['concert','login-panel']
         let link = ['Concet/Concert.html','login/login.html']
         
-        if(windowWidth.matches){
+        if(w.matches){
             
-            screen.style.width = '50%'
+            screen.style.width = '58%'
             screen.style.height = '40%'
+            
+        screen.style.left = '10%'    
+        screen.style.top = '31%';
         }
         
         else{
             
             screen.style.width = '35%';
-            screen.style.height = '30%'
+            screen.style.height = '30%';
+            
+        screen.style.left = '40%';
+        screen.style.top = '33%';
         }
         
-        screen.style.bottom = '0%';
-        screen.style.top = '30%';
+        
         
         for(let i = 0; i < arr.length; i++){
             let page = document.createElement('a')
@@ -259,6 +352,10 @@ const projects = () => {
             
             screen.append(page);
         }//end 4 loop
+        
+        close.style.visibility = 'visible'
+        close.style.marginLeft = '40%';
+        screen.append(close);
         
     }//end clicked if else
 }//end of projects function
@@ -297,3 +394,5 @@ navBar.addEventListener('mouseout', () => {
     facebook.style.transitionDelay = '4s';
     facebook.style.top = '170px';
 });
+
+

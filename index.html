@@ -16,28 +16,47 @@
   <header>
     
   <nav id = 'nav-header'>
-      <button class = 'menu-button' onclick = 'service()'>Services</button>
+    
+    <div id = 'service-backg' class = 'front backg'>
+      <button class = 'menu-button' onclick = 'services()'>Services</button>
+    </div>
+    
+    <div id = 'contact-backg' class = 'front backg'>
     <button class = 'menu-button' onclick = 'contactInfor()'>Contact</button>
+   </div> 
+    
+    <div id = 'about-backg' class = 'front backg'>
     <button class = 'menu-button' onclick = 'about()'>About</button>
-     
+    </div> 
+    
     </nav>
     
     
- <div id = 'screen'>
- <button id = 'back' onclick = 'back()'>Back</button>
- </div>
+ <div id = 'screen'></div>
     
-  <img src ="photos/BackgroundEraser_20220518_121129235.png" alt = "Thapelosl's image">
-    
- <h1 id = 'main-header' class = 'main-shadow'><u>MY ONLINE PORTFOLIO</u></h1>   
+  <img src ="photos/BackgroundEraser_20220518_121129235.png" alt = "Thapelosl's image"> 
     
   </header>
-     
-  
+   <!-- 
+  <div id  = 'main-title'>
+    <h1 class ='ch'>M</h1>
+    <h1 class ='ch'>Y</h1>
+    <h1 class ='ch'> </h1>
+    <h1 class ='ch'>P</h1>
+    <h1 class ='ch'>O</h1>
+    <h1 class ='ch'>R</h1>
+    <h1 class ='ch'>T</h1>
+    <h1 class ='ch'>F</h1>
+    <h1 class ='ch'>O</h1>
+    <h1 class ='ch'>L</h1>
+    <h1 class ='ch'>I</h1>
+    <h1 class ='ch'>O</h1>
+  </div>   
+  -->
   <main>
     
     
-  <div id = 'main-display'>
+  <div id = 'main-display' class = 'main-backg'>
     
   <button id = 'bio' class = 'display-button' onclick = 'bioInfor()'>BIO</button>
   <button id = 'education' class = 'display-button' onclick = 'edu()'>EDUCATION</button>
