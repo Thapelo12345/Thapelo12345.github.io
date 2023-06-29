@@ -9,46 +9,43 @@ const paragraphs = ['My name is Thapelo Petrick Sikhosana born In 1990 June 7.On
 let body = document.querySelector('body')
 const screen = document.querySelector('#screen');
 
-const close = document.createElement('button')
+const close = document.createElement('button');
 close.setAttribute('id', 'back')
 close.innerText = 'Back';
 
 const main = document.querySelector('#main-display');
-const mainButtons = document.querySelectorAll(".display-button")
+const mainButtons = document.querySelectorAll(".display-button");
 
-main.addEventListener('mouseover', () =>{
-    main.style.boxShadow = '-4px 1px 3px aqua';
+const On = () =>{
+    main.style.boxShadow = '-3px 2px 0px aqua';
     main.style.transitionDuration = '1s';
-    
-    mainButtons.forEach((item) =>{ 
-    item.style.boxShadow = '-1px 1px 3px aqua';
-        item.style.transitionDuration = '1s';
+    mainButtons.forEach((item) =>{
+        item.style.boxShadow = '-1px 1px 0px aqua';
+        item.style.transitionDution = '1s';
+        
     })//end of each loop
-})
-main.addEventListener('mouseout', () =>{
     
-    main.style.transitionDuration = '1s';
+}//end of on funct
+
+const Off = () =>{
+    
     main.style.boxShadow = 'none';
+    main.style.transitionDuration = '1s' 
     
     mainButtons.forEach((item) =>{
-    item.style.boxShadow = 'none';
-    item.style.transition = '1s';
+        item.style.boxShadow = 'none';
+        item.style.transitionDution = '1s';
 })//end of each loop
+}//end of off funct
     
-})
-
-mainButtons.forEach((item) => {{
-    item.addEventListerner('mouseover', () =>{
-            main.style.boxShadow = '-4px 1px 3px aqua';
-    main.style.transitionDuration = '1s';
-    })
+    main.addEventListener('mouseover',On);
+    main.addEventListener('mouseout', Off);
     
-    item.addEventListerner('mouseout', () =>{
-            main.style.boxShadow = 'none';
-    main.style.transitionDuration = '1s';
-    })
-}})
-
+    mainButtons.forEach((item) =>{
+        item.addEventListener('mouseover', On);
+        item.addEventListener('mouseout', Off);
+    })//end of each loop
+    
 var clicked = false;
 const labels = ['Name', 'Surname', 'Age', 'Race','Nationality', 'Criminal Record', 'Marital status', 'Kids']
 const answers = ['Thapelo Petrick', 'Sikhosana', '33', 'Black', 'South African', 'None', 'Single', 'None']
@@ -338,7 +335,7 @@ const projects = () => {
         if(w.matches){
             
             screen.style.width = '58%'
-            screen.style.height = '40%'
+            screen.style.height = '50%'
             
         screen.style.left = '10%'    
         screen.style.top = '31%';
@@ -357,13 +354,21 @@ const projects = () => {
         
         for(let i = 0; i < arr.length; i++){
             let page = document.createElement('a')
-    
+     																	let btn = document.createElement('button');
+            
             page.setAttribute('class','projects-link')
             page.setAttribute('href',link[i]);
+            page.style.color = 'cyan';
             page.target = "_blank";
             page.innerText = arr[i];
             
-            screen.append(page);
+            btn.style.width = 'max-content';
+            btn.style.paddingRight = '30px';
+            btn.style.margin = '7px';
+            btn.style.backgroundColor = 'rgb(19, 60, 67)';
+            btn.append(page);
+            
+            screen.append(btn);
         }//end 4 loop
         
         close.style.visibility = 'visible'
@@ -386,26 +391,24 @@ let facebook = document.querySelector('#facebook')
 navBar.addEventListener('mouseover', () => {
     
     facebook.style.top = '0px';
-    facebook.style.transitionDelay = '0s';
+    facebook.style.transitionDelay = '1s';
     
     linkedin.style.top = '0px';
-    linkedin.style.transitionDelay = '2s';
+    linkedin.style.transitionDelay = '3s';
     
     
     github.style.top = '0px';
-    github.style.transitionDelay = '4s';
+    github.style.transitionDelay = '5s';
 })
 
 navBar.addEventListener('mouseout', () => {
     
-    github.style.transitionDelay = '0s'
+    github.style.transitionDelay = '1s';
     github.style.top = '50px';
     
-    linkedin.style.transitionDelay = '2s';
-    linkedin.style.top = '110px'
+    linkedin.style.transitionDelay = '3s';
+    linkedin.style.top = '110px';
     
-    facebook.style.transitionDelay = '4s';
+    facebook.style.transitionDelay = '5s';
     facebook.style.top = '170px';
-});
-
-
+})
