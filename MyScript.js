@@ -412,3 +412,30 @@ navBar.addEventListener('mouseout', () => {
     facebook.style.transitionDelay = '5s';
     facebook.style.top = '170px';
 })
+
+const imageAndTitle = document.querySelector('#image-title')
+const image = document.querySelector('#pic');
+const mainTitle = document.querySelector('#main-title')
+var turned = false;
+
+imageAndTitle.addEventListener('mouseover', () => {
+    if(turned){
+        
+        turned = false;
+        image.style.transition = '2s';
+        mainTitle.style.transition = '2s'
+        
+        image.style.transform = 'rotateY(0deg)';
+        mainTitle.style.transform = 'rotateY(-90deg)';
+    }
+    
+    else{
+        
+        turned = true;
+          image.style.transition = '2s';
+        mainTitle.style.transition = '2s';
+        
+        image.style.transform = 'rotateY(90deg)';
+        mainTitle.style.transform = 'rotateY(0deg)';
+    }
+})
