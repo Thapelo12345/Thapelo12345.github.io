@@ -1,0 +1,168 @@
+body{
+  background-color: lightblue;
+}
+label{
+  font-family: serif;
+}
+a{
+  margin-left: 7%;
+}
+
+@media screen and (max-width: 720px) {
+  a{
+    margin-left: 2%;
+  }
+}
+#form-title{
+ text-align: center; 
+  font-family: serif;
+}
+
+img{
+  position: relative;
+  left: 170px;
+  width: auto;
+  margin: auto;
+  background-color: lightblue;
+}
+
+@media screen and (max-width: 720px) {
+  img{
+  position: relative;
+  left: 60px;
+  width: auto;
+  margin: auto;
+}
+}
+#form{
+  box-shadow: 3px 2px 20px black;
+  background-image: linear-gradient(10deg, skyblue, lightblue);
+  width: auto;
+  margin: auto;
+  width: 40vw;
+  padding: 2%;
+  transform: perspective(1234px) rotateY(40deg);
+  transition-duration: 1s;
+  -webkit-box-reflect: below 0px 1px linear-gradient(20deg, transparent, white);
+  animation-name: twist;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+#form:hover {
+  transform: rotateY(2deg);
+  transition-duration: 1s;
+}
+@media screen and (max-width: 720px) {
+  form:hover {
+  transform: rotateY(0deg);
+  transition-duration: 1s;
+}
+}
+@media screen and (max-width: 720px) {
+  #form{
+  box-shadow: 3px 2px 20px;
+  width: auto;
+  margin: auto;
+  width: 40vw;
+  padding: 2%;
+  transform: perspective(0px) rotateY(0deg);
+  transition-duration: 1s;
+}
+}
+
+.pair{
+  margin: 5%;
+}
+
+@media screen and (max-width: 720px) {
+  .pair{
+    margin: 2%;
+  }
+}
+#login{
+  position: relative;
+  left: 200px;
+}
+@media screen and (max-width: 720px) {
+  
+ #login{
+  position: relative;
+  left: 50px;
+} 
+}
+nav{
+  display: flex;
+  flex-flow: row;
+  box-shadow: 2px 2px 20px black;
+  margin-bottom: 4%;
+  padding: 0.5%;
+}
+
+.buttons{
+  background-color: lightblue;
+  border: 1px solid white;
+  box-shadow: 2px 3px 2px gray;
+}
+#submit{
+  position: relative;
+  left: 38%;
+  height: 2%;
+  margin-top: 2%;
+}
+#email-input{
+  position: relative;
+  left: 37%;
+  height: 2%;
+  margin-top: 2%;
+}
+#email{
+  position: relative;
+  left: 36%;
+  top: 3%;
+  margin-top: 2%;
+}
+
+
+
+
+
+@media screen and (max-width: 720px) {
+
+#submit{
+  position: relative;
+  left: 10%;
+  height: 2%;
+  margin-top: 2%;
+}
+}
+
+@media screen and (max-width: 720px)
+{
+#email-input{
+  position: relative;
+  left: 7%;
+  height: 2%;
+  margin-top: 2%;
+}
+}
+
+@media screen and (max-width: 720px) 
+{
+#email{
+  position: relative;
+  left: 5%;
+  top: 3%;
+  margin-top: 3%;
+  width: max-content;
+}
+}
+@keyframes twist{
+  from{
+    transform: perspective(1234px) rotateY(40deg);
+    transition-duration: 1s;
+  }
+  to{
+    transform: perspective(1234px) rotateY(-40deg);
+    transition-duration: 1s;  
+  }
+}
