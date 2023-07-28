@@ -82,8 +82,8 @@ const services = () =>{
         
         if(h.matches){
             
-            screen.style.width = '40%';
-            screen.style.height = '52%';
+            screen.style.width = '50%';
+            screen.style.height = '57%';
             
         }//end of hieght if statement
         
@@ -95,7 +95,7 @@ const services = () =>{
         
         else{
         screen.style.width = '40%';
-        screen.style.height = '53%'
+        screen.style.height = '56%'
         }//end of else 
         
         screen.style.top = '5px';
@@ -110,6 +110,10 @@ const services = () =>{
         let i = 0;
         
         let item = document.createElement('li');
+        
+        if(h.matches)
+        item.style.fontSize = '2rem';
+        
                 item.style.marginBottom = '20px';
                 item.innerText = arr[i]
                 i++;
@@ -120,6 +124,10 @@ const services = () =>{
                 
                 let item = document.createElement('li');
                 item.style.marginBottom = '20px';
+                
+                if(h.matches)
+                item.style.fontSize = '2rem';
+                
                 item.innerText = arr[i]
                 i++;
                 list.append(item);
@@ -134,7 +142,7 @@ const services = () =>{
                 clearInterval(myPlay);
             }//end of else statement
             
-        }, 957)
+        }, 457)
         
        //screen.append(document.querySelector('#back')) 
     }//end if clicked
@@ -159,6 +167,15 @@ const contactInfor = () =>{
         screen.style.width = '76%';    
      							    
      							}//end of if   
+        
+        else if(h.matches){
+            
+            screen.style.height = '46%';
+        screen.style.width = '68%'; 
+            
+            screen.style.top = '4px';
+        }//end of else if
+        
         else{
             
             screen.style.left = '30%';
@@ -172,6 +189,10 @@ const contactInfor = () =>{
         for(let i = 0; i < lab.length; i++){
             
            let text = document.createElement('h3')
+            
+            if(h.matches)
+            text.style.fontSize = '2rem';
+            
             text.innerText = lab[i];
             text.style.color = 'white';
             text.style.marginLeft = '3%';
@@ -199,6 +220,10 @@ const about = () =>{
             screen.style.width = '80%'
             
         }//end if 
+        else if(h.matches){
+            
+            screen.style.height = '58%';
+        }//end of else if
         
         else{
         screen.style.width = '64%'
@@ -211,6 +236,10 @@ const about = () =>{
             for	(let i = 0; i < paragraphs.length; i++){
                 
              let para = document.createElement('p');
+                
+                if(h.matches)
+                para.style.fontSize = '1.5em';
+                
                 para.setAttribute('id', 'about')
                 para.innerText = paragraphs[i];
                 screen.append(para);
@@ -253,6 +282,9 @@ const bioInfor = () => {
         let holder = document.createElement('div');
         holder.setAttribute('class', 'variable-value');
         holder.style.width = '82%'
+        
+        if(h.matches)
+        holder.style.height = '10%';
         
         const label = document.createElement('h4');
         
@@ -341,6 +373,15 @@ const projects = () => {
         screen.style.top = '31%';
         }
         
+        else if(h.matches){
+        				
+         screen.style.width = '58%'
+            screen.style.height = '30%'
+            
+        screen.style.left = '5%'    
+        screen.style.top = '31%';   
+        }//end of else if
+        
         else{
             
             screen.style.width = '35%';
@@ -353,7 +394,7 @@ const projects = () => {
         
         
         for(let i = 0; i < arr.length; i++){
-            let page = document.createElement('a')
+            let page = document.createElement('a');
      																	let btn = document.createElement('button');
             
             page.setAttribute('class','projects-link')

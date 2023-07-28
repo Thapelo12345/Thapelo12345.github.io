@@ -45,6 +45,7 @@ body{
   width: 80%;
   height: 5vh;
   margin-left: 7%;
+    margin-top: 4%;
   padding-left: 5%
   
 }
@@ -92,9 +93,18 @@ body{
     width: 18vw;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .front:hover {
+    width: 22%;
+    border: 1px solid red;
+  }
+}
+
 @media screen and (min-height: 768px) {
   .front{
-    height: 2vh;
+    height: 5vh;
+    margin-left: 9%;
   }
 }
 
@@ -113,7 +123,6 @@ body{
   left: -2px;
   background-image: conic-gradient(cyan 360deg, rgb(19, 60, 67) 5deg);
   background-repeat: none-repeat;
-  /*background-size: 20%;*/
   width: calc(100% - 6px);
   height: calc(100% - 27px);
   z-index: -1;
@@ -121,6 +130,47 @@ body{
   animation-name: backg-play;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+}
+@media screen and (max-width: 768px){
+  .backg:hover::before {
+  content: '';
+  border-bottom-left-radius: 31%;
+  border-top-right-radius: 31%;
+  filter: blur(1px);
+  position: absolute;
+  left:  9px;
+    top: 1px;
+    background-image: conic-gradient(cyan 360deg, rgb(19, 60, 67) 5deg);
+  background-repeat: none-repeat;
+  width: calc(100% - 8px);
+  height: calc(100% -  7px);
+  z-index: -1;
+  transition-duration: 2s;
+  animation-name: backg-play;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+}
+
+@media screen and (min-height: 768px){
+  .backg:hover::before {
+  content: '';
+  border-bottom-left-radius: 25%;
+  filter: blur(1px);
+  border-top-right-radius: 25%;
+  position: absolute;
+  left: -2px;
+    top: 1px;
+  background-image: conic-gradient(cyan 360deg, rgb(19, 60, 67) 5deg);
+  background-repeat: none-repeat;
+  width: calc(100% - 6px);
+  height: calc(100% - 19px);
+  z-index: -1;
+  transition-duration: 2s;
+  animation-name: backg-play;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
 }
 .menu-button{
   color: tan;
@@ -144,11 +194,17 @@ body{
   font-family: myfont1;
   font-size: 1.5rem;
   margin-left: 1%;
-  width: max-content;
-  border-radius: 7%;
+  width: 119%;
+  border-bottom-left-radius: 31%;
+  border-top-right-radius: 31%;
   background-color: rgb(19, 60, 67);
   text-shadow: -2px 0px 0px purple;
   transform: rotateY(40deg);
+  }
+}
+@media screen and (min-height: 768px) {
+  .menu-button{
+    font-size: 3.7em;
   }
 }
 
@@ -161,12 +217,52 @@ body{
   position: absolute;
   transform: rotateY(-90deg);
 }
+@media screen and (max-width: 768px) {
+  #main-title{
+  display: flex;
+  flex-flow: row;
+  top: 22%;
+  left: 3%;
+  width: max-content;
+  position: absolute;
+  transform: rotateY(-90deg);
+}
+}
+@media screen and (min-height: 768px) {
+  #main-title{
+    display: flex;
+  flex-flow: row;
+  top: 22%;
+  left: 1%;
+  width: max-content;
+  position: absolute;
+  transform: rotateY(-90deg);
+  }
+}
 .ch{
   margin-left: 20%;
   font-family: myfont2;
   font-size: 2rem;
   color: aqua;
   -webkit-box-reflect: below 4px 0 linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+@media screen and (max-width: 768px) {
+  .ch{
+  margin-left: 8%;
+  font-family: myfont2;
+  font-size: 1.7rem;
+  color: aqua;
+  -webkit-box-reflect: below 4px 0 linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+}
+@media screen and (min-height: 768px) {
+  .ch{
+  margin-left: 13%;
+  font-family: myfont2;
+  font-size: 3rem;
+  color: aqua;
+  -webkit-box-reflect: below 4px 0 linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
 }
 img{
   margin-top: 10px;
@@ -182,8 +278,8 @@ img{
 }
 
 img:hover {
-  /*transform: perspective(1205px) rotateY(45deg);*/
   filter: opacity(12%);
+
 }
 
 @media screen and (max-width: 768px) {
@@ -194,6 +290,13 @@ img:hover {
   left: 35%;
 }
 }
+@media screen and (min-height: 768px) {
+  img{
+    margin-top: 20px;
+    width: 35%;
+    height: 50%;
+  }
+}
 
 main{
   display: flex;
@@ -201,6 +304,15 @@ main{
   margin-top: 25px;
   width: 73%;
   height: 50%;
+}
+@media screen and (min-height: 768px) {
+  
+ main{ 
+  display: flex;
+  flex-flow: column;
+   padding: 5%;
+ }
+  
 }
 
 #main-display{
@@ -218,13 +330,19 @@ main{
   transform: perspective(250px) rotateX(20deg) skewX(40deg);
   transition-duration: 3s;
 }
-
 .main.backg::before {
   position: absolute;
   width: calc(100%);
   height: calc(100%);
   background-color: yellow;
-  
+}
+
+@media screen and (min-height: 768px) {
+  main-display{
+    width: 71%;
+    height: 102%;
+    margin-left: 5%;
+  }
 }
 
 .display-button{
@@ -253,6 +371,41 @@ main{
   box-shadow: -1px 1px 30px aqua;
   transform: scale(1.6) rotateX(-35deg) skewX(-25deg);
   transition-duration: 2s 
+}
+@media screen and (max-width: 768px){
+  .display-button:hover {
+  color: tan;
+  font-size: 2rem;
+  border: 1px solid aquamarine;
+  border-radius: 30%;
+  padding: 7px;
+  font-family: myfont4;
+  text-shadow: none;
+  box-shadow: -1px 1px 30px aqua;
+  transform: scale(1.6) rotateX(-35deg) skewX(-25deg);
+  transition-duration: 2s 
+}
+}
+@media screen and (min-height: 768px){
+  .display-button:hover {
+  color: tan;
+  font-size: 4rem;
+  border: 1px solid aquamarine;
+  border-radius: 30%;
+  padding: 7px;
+  font-family: myfont4;
+  text-shadow: none;
+  box-shadow: -1px 1px 30px aqua;
+  transform: scale(1.6) rotateX(-35deg) skewX(-25deg);
+  transition-duration: 2s 
+    z-index: 2;
+}
+}
+
+@media screen and (min-height: 768px) {
+  .display-button{
+    font-size: 3em;
+  }
 }
 
 .projects-link{
@@ -303,7 +456,7 @@ header{
 }
 @media screen and (max-width: 768px){
   #link-nav::before {
-  content: 'click below!';
+  content: 'Tap below!';
   color: lightblue;
   align-self: center;
   text-shadow: 1px 0px 0px aqua;
@@ -321,11 +474,24 @@ header{
     z-index: 1;
   }
 }
+@media screen and (min-height: 768px){
+  
+  #link-nav{
+    position: relative;
+  left: 0;
+    top: 20px;
+  display: flex;
+  flex-flow: column;
+  width: 35vw;
+  -webkit-box-reflect: below 2px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  overflow: hidden;
+  }
+}
 a{
   display: flex;
   flex-flow: row;
   font-size: 2em;
-  margin:10px;
+  margin: 10px;
   padding-left: 10%;
   width: 85%;
   overflow: hidden;
@@ -333,6 +499,12 @@ a{
 }
 h4{
   color: white;
+}
+@media screen and (min-height: 768px){
+  h4{
+  color: white;
+    font-size: 2em;
+}
 }
 #facebook{
   position: relative;
@@ -414,8 +586,12 @@ svg{
   box-shadow: 1px 1px 6px 1px cyan;
   z-index: 2;
   visibility: hidden;
-}
+  }
        }
+li{
+  color: wheat;
+
+}
 
 #back{
   color: wheat;
@@ -442,6 +618,13 @@ svg{
     background-color: rgba(30, 69, 80,0.7);
     transition-duration: 1s;
   }       
+}
+@media screen and (min-height: 768px) {
+  #back{
+    width: 20%;
+    height: 30%;
+    font-size: 2rem;
+  }
 }
 #back:hover {
   box-shadow: 14px 2px 45px 4px aquamarine;
@@ -475,7 +658,6 @@ svg{
   transition-duration: 1s;
 }
 
-
 @media screen and (max-width: 768px) {
   .variable-value{
     position: relative;
@@ -488,6 +670,23 @@ svg{
   flex-wrap: wrap;
   flex-flow: row;
     flex-grow: 1;
+}
+}
+
+@media screen and (min-height: 768px){
+  .variable-value{
+  box-shadow: -1px 2px 3px aquamarine;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  padding-left: 2%;
+   padding-bottom: 2%;
+    padding-top: 0;
+  margin-left: 5px;
+  margin-bottom: 12px;
+  border-radius: 5%;
+  overflow: hidden;
+  transition-duration: 1s;
 }
 }
 @keyframes backg-play{
