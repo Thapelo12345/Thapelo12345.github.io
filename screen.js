@@ -33,13 +33,7 @@ label.style.backgroundImage = 'linear-gradient(to bottom, white, aqua, rgba(0,0,
 
 screen.append(label);
 
-/**var b = document.createTextNode('Back');
-back.appendChild(b);
 
-if(h.matches){
-    b.style.fontSize = '4em';
-}//end of if
-**/
 back.style.backgroundImage = 'linear-gradient(0deg, rgba(0,0,0,0.1), aqua, white)';
 back.innerText = 'Back';
 back.style.width = 'auto';
@@ -52,6 +46,12 @@ back.style.borderRadius = '6%';
 if(h.matches){
     back.style.fontSize = '2.5em';
 }//end of if
+
+else{
+    
+    back.style.fontSize = '1em';
+    
+}//end of else
 
 back.onclick = () =>{
     
