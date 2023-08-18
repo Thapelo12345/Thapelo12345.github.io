@@ -1,4 +1,5 @@
 const w = window.matchMedia('(max-width: 768px)');
+const h = window.matchMedia('(min-height: 768px)');
 
 var clicked = false;
 
@@ -32,8 +33,15 @@ label.style.backgroundImage = 'linear-gradient(to bottom, white, aqua, rgba(0,0,
 
 screen.append(label);
 
-back.appendChild(document.createTextNode('Back'));
+/**var b = document.createTextNode('Back');
+back.appendChild(b);
+
+if(h.matches){
+    b.style.fontSize = '4em';
+}//end of if
+**/
 back.style.backgroundImage = 'linear-gradient(0deg, rgba(0,0,0,0.1), aqua, white)';
+back.innerText = 'Back';
 back.style.width = 'auto';
 back.style.marginLeft = '50%';
 back.style.width = '15%';
@@ -41,9 +49,11 @@ back.style.height = '10%';
 back.style.border = 'none';
 back.style.borderRadius = '6%';
 
+if(h.matches){
+    back.style.fontSize = '2.5em';
+}//end of if
+
 back.onclick = () =>{
-    
-    clicked = false;
     
         while(screen.childNodes.length != 1){
         screen.removeChild(screen.childNodes[1]);
@@ -56,6 +66,7 @@ back.onclick = () =>{
     
         screen.remove();
         clearTimeout(pause1);
+            clicked = false;
     
     }, 1000);
     
@@ -83,6 +94,13 @@ const service = () =>{
         screen.style.height = '47%';
             
         }//end of if
+        
+        else if(h.matches){
+            
+            screen.style.width = '65%';
+            screen.style.height = '33%';
+            
+        }// end of if else
         
         else{
             
@@ -113,6 +131,10 @@ const service = () =>{
             head.style.margin = '3%';
             head.style.textShadow = '1px 1px 0px black';
             head.style.position = 'relative';
+            
+            if(h.matches){
+                head.style.fontSize = '2em';
+            }//end of if
             
             list.append(head);
             
@@ -157,6 +179,14 @@ const contacts = () =>{
                 
             }//end of if
             
+            else if(h.matches){
+                
+                
+                screen.style.width = '61%';
+                screen.style.height = '24%';
+                
+            }// end of if else
+            
             else{
         screen.style.width = '45%'
         screen.style.height = '64%';
@@ -173,7 +203,15 @@ const contacts = () =>{
             head.innerText = arr[i];
             head.style.color = 'white';
             head.style.textShadow = '1px 1px 0px black';
+            
+            if(h.matches){
+                
+                head.style.fontSize = '2em';
+            }//end of if
+            
+            else{
             head.style.fontSize = '1em';
+            }//end of else
             head.style.marginLeft = '5px';
             
             screen.append(head);
@@ -202,6 +240,13 @@ const about = ()=>{
         screen.style.left = '5%';
         }//end of if
         
+        else if(h.matches){
+            
+            screen.style.top = '2%';
+            screen.style.left = '2%';
+            
+        }// end of if else
+        
         else{
         screen.style.top = '5%';
         screen.style.left = '15%';
@@ -216,6 +261,13 @@ const about = ()=>{
                 screen.style.height = '65%';
                 
             }//end of if
+            
+            else if(h.matches){
+                
+                screen.style.width = '87%';
+                screen.style.height = '47%';
+                
+            }// end of if else
             
             else{
         screen.style.width = '65%'
@@ -241,6 +293,11 @@ const about = ()=>{
             para.style.textShadow = '1px 1px 0px black';
             para.style.margin = '5px';
             
+            if(h.matches){
+                
+                para.style.fontSize = '2em';
+                
+            }//end of if	
             screen.append(para);
         }//end of 4 loop
         
@@ -268,6 +325,13 @@ const bio =() =>{
         screen.style.height = '55%';
                 
             }//end of if
+            
+            else if(h.matches){
+                
+                screen.style.width = '79%';
+                screen.style.height = '35%';
+                
+            }// end of if else
             
             else{
                 screen.style.width = '45%';
@@ -297,16 +361,30 @@ const bio =() =>{
             let cell1 = document.createElement('td');
             cell1.style.color = 'white';
             cell1.style.textShadow = '1px 1px 0px black';
-            cell1.style.fontSize = '1em';
+            
             cell1.style.boxShadow = '-2px 1px 31x white';
             cell1.style.height = '15%';
             
             let cell2 = document.createElement('td');
             cell2.style.color = 'white';
             cell2.style.textShadow = '1px 1px 0px black';
-            cell2.style.fontSize = '1em'
+            
             cell2.style.boxShadow = '-2px 1px 0px white'
             cell2.style.height = '15%';
+            
+            if(h.matches){
+                
+                cell1.style.fontSize = '2em';
+                cell2.style.fontSize = '2em';
+                
+            }//end of if
+            
+            else{
+                
+                cell1.style.fontSize = '1em';
+                cell2.style.fontSize = '1em';
+                
+            }//end of else
             
             cell1.innerText = labels[i];
             cell2.innerText = answers[i];
@@ -345,6 +423,13 @@ const edu = ()=>{
                 
             }//end of if
             
+            else if(h.matches){
+                
+                screen.style.width = '85%';
+                screen.style.height = '32%'
+                
+            }// end of if else
+            
             else{
             screen.style.width = '45%';
             screen.style.height = '75%';
@@ -359,7 +444,19 @@ const edu = ()=>{
             
             let head = document.createElement('h5')
             head.innerText = arr[i];
+            
+            if(h.matches){
+                
+                head.style.fontSize = '2em';
+                
+            }//end of if
+            
+            else{
+                
             head.style.fontSize = '1em';
+                
+            }//end of else
+            
             head.style.color = 'white';
             head.style.textShadow = '1px 1px 0px black';
             head.style.marginLeft = '8px';
@@ -392,6 +489,13 @@ const project = ()=> {
             
         }//end of if
         
+        else if(h.matches){
+            
+            screen.style.left = '10%';
+            screen.style.top = '25%';
+            
+        }// end of if else
+        
         else{
         screen.style.left = '40%';
         screen.style.top = '33%';
@@ -406,9 +510,16 @@ const project = ()=> {
                 
             }//end of if
             
+            else if(h.matches){
+                
+                screen.style.width = '58%';
+                screen.style.height = '17%';
+                
+            }// end of if else
+            
             else{
-            screen.style.width = '25%';
-            screen.style.height = '44%';
+            screen.style.width = '27%';
+            screen.style.height = '46%';
                 
             }//end of else
             
@@ -423,7 +534,18 @@ const project = ()=> {
             page.setAttribute('href',link[i]);
             page.style.color = 'white';
             page.style.textDecoration = 'none';
+            
+            if(h.matches){
+                
+                page.style.fontSize = '2.8em';
+                
+            }//end of if
+            
+            else{
             page.style.fontSize = '1.7em';
+                
+            }//end of else
+            
             page.style.textShadow = '1px 1px 0px black'
             page.target = "_blank";
             page.innerText = arr[i];
