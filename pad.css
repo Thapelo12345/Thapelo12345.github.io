@@ -1,10 +1,16 @@
-
+@media screen and (min-height: 768px){
+  #header-nav{
+  margin-bottom: 12px;
+  margin-top: 5%;
+  
+}
+}
 @media screen and (min-height: 768px) {
   .header-button{
   font-size: 4.3rem;
   width: 16%;
   height: 95%;
-  margin-left: 9%;
+  margin-left: 13%;
   margin-top: 2px;
   color: aqua;
   -webkit-box-reflect: below 2px 0 linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3));
@@ -21,11 +27,12 @@
 @media screen and (min-height: 768px){
   img{
   justify-self: center;
-  width: 30%;
-  height: 35%;
+  width: 35%;
+  height: 40%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+    margin-top: 17%;
   transform: rotateY(0deg);
   -webkit-box-reflect: below 1px 0 linear-gradient(to bottom, rgba(0,0,0,0.2));
   transition: 1s;
@@ -35,9 +42,9 @@
 
 @media screen and (min-height: 768px){
   .ch{
-  margin-left: 7%;
-    margin-top: 40%;
-  font-size: 3rem;
+  margin-left: 6%;
+    margin-top: 65%;
+  font-size: 3.5rem;
   font-family: myfont;
   color: aqua;
   -webkit-box-reflect: below 2px 0 linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
@@ -64,7 +71,7 @@
   display: flex;
   flex-flow: column;
   margin-left: 18%;
-    margin-top: 3%;
+    margin-top: 7%;
     z-index: 1;
   transform: perspective(250px) rotateX(20deg) skewX(40deg);
   transition: 2s;
@@ -79,7 +86,7 @@
   font-family: myfont1;
   color: aqua;
   text-shadow: 1px 1px 0px black;
-  background-color: aliceblue;
+  background: none;
     border-radius: 7%;
   -webkit-box-reflect: below 1px 0 linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.2));
   border: none;
@@ -88,9 +95,9 @@
 }
 @media screen and (min-height: 768px){
   .main-button:hover {
-  transform: rotateX(-20deg) skewX(-33deg);
+  transform: rotateX(-20deg) skewX(-30deg);
     background: none;
-  font-size: 5em;
+  font-size: 5.4em;
   transition: 1s;
 }
 }
@@ -99,7 +106,8 @@
   display: flex;
   flex-flow: row;
   margin-left: 5%;
-    margin-top: 20%;
+    margin-top: 15%;
+    margin-bottom: 10%;
   overflow: hidden;
 }
 }
@@ -109,17 +117,6 @@
 }
 }
 
-@media screen and (min-height: 768px) {
-  .link-buttons{
-  position: relative;
-  top: 68%;
-  text-decoration: none;
-  margin: 9px;
-  font-size: 1rem;
-  -webkit-box-reflect: below 0px 0 linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1));
- transition: 2s;
-}
-}
 @media screen and (min-height: 768px) {
   svg{
   position: relative;
