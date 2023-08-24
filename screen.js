@@ -46,14 +46,14 @@ if(h.matches){
     
     back.style.width = '17%';
     back.style.height = '12%';
-    back.style.fontSize = '2.5em';
+    back.style.fontSize = '2.5rem';
     
 }//end of if
 
 else{
 back.style.width = '23%';
 back.style.height = '19%';
-    back.style.fontSize = '0.5em';
+    back.style.fontSize = '0.5rem';
     
 }//end of else 
 
