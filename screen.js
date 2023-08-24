@@ -51,9 +51,9 @@ if(h.matches){
 }//end of if
 
 else{
-back.style.width = '23%';
-back.style.height = '19%';
-    back.style.fontSize = '0.5rem';
+/**back.style.width = '23%';
+back.style.height = '19%';**/
+    back.style.fontSize = '1.3rem';
     
 }//end of else 
 
