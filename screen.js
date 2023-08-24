@@ -46,25 +46,19 @@ if(h.matches){
     
     back.style.width = '17%';
     back.style.height = '12%';
+    back.style.fontSize = '2.5em';
+    
 }//end of if
 
 else{
-back.style.width = '15%';
-back.style.height = '10%';
+back.style.width = '21%';
+back.style.height = '16%';
+    back.style.fontSize = '0.7em';
+    
 }//end of else 
 
 back.style.border = 'none';
 back.style.borderRadius = '6%';
-
-if(h.matches){
-    back.style.fontSize = '2.5em';
-}//end of if
-
-else{
-    
-    back.style.fontSize = '1em';
-    
-}//end of else
 
 back.onclick = () =>{
     
