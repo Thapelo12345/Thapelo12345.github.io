@@ -14,7 +14,7 @@ screen.style.position = 'absolute';
 screen.style.borderRadius = '6%';
 screen.style.transition = '2s';
 screen.style.zIndex = '1';
-screen.style.boxShadow = '-4px 5px 25px white';
+screen.style.boxShadow = '-4px 10px 25px white';
 screen.style.width = '0';
 screen.style.height = '0';
 screen.style.overflowY = 'auto';
@@ -38,8 +38,21 @@ back.style.backgroundImage = 'linear-gradient(0deg, rgba(0,0,0,0.1), aqua, white
 back.innerText = 'Back';
 back.style.width = 'auto';
 back.style.marginLeft = '50%';
+back.style.marginTop = '3%';
+back.style.marginBottom = '2%';
+
+
+if(h.matches){
+    
+    back.style.width = '17%';
+    back.style.height = '12%';
+}//end of if
+
+else{
 back.style.width = '15%';
 back.style.height = '10%';
+}//end of else 
+
 back.style.border = 'none';
 back.style.borderRadius = '6%';
 

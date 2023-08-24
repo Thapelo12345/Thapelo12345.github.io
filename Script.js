@@ -1,6 +1,6 @@
+
 const TextImage = document.querySelector('#header-image');
 const pic = document.querySelector('img');
-
 const chContainer = document.querySelector('#ch-container');
 const chList = document.querySelectorAll('.ch');
 
@@ -23,12 +23,6 @@ TextImage.addEventListener("mouseover", ()=> {
     }//end of if
     
     else{
-        /**pic.style.transform = "rotateY(0deg)";
-        chContainer.style.transform = "rotateY(-90deg)";
-        
-                for(let i = 0; i < chList.length; i++){
-            chList[i].style.transform = "rotateY(-90deg)";
-        }//end of 4 loop**/
         
         for(let i = 0; i < chList.length; i++){
             chList[i].style.transform = "rotateY(-85deg)";
@@ -81,3 +75,28 @@ mainNav.addEventListener("mouseout", ()=>{
     
 });//end of mousecout function
 
+pic.addEventListener('mouseover', (e)=>{
+    let posx = e.clientX;
+    
+    pic.style.transition = '2s';
+    
+    if(posx <= 490){
+        
+        pic.style.transform = 'perspective(2500px) rotateY(-75deg)';
+        
+    }//end of if 
+    
+    else{
+        
+        pic.style.transform = 'perspective(2500px) rotateY(75deg)';
+        
+    }//end of if else
+    
+});
+
+pic.addEventListener('mouseout', ()=>{
+    
+    pic.style.transition = '2s';
+    pic.style.transform = 'perspective(2500px) rotateY(0deg)';
+    
+})

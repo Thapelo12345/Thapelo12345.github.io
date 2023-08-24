@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .header-button{
   font-size: 1.8rem;
   margin: 3px;
@@ -87,7 +87,14 @@
   transition: 1s;
 }
 }
-
+@media screen and(max-width: 768px){
+  .main-button:hover {
+  transform: rotateX(-20deg) skewX(-33deg);
+    background: none;
+  font-size: 2.4em;
+  transition: 1s;
+}
+}
 @media screen and (max-width: 768px){
   #main-nav{
   display: flex;
@@ -97,13 +104,13 @@
   overflow: hidden;
 }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   #main-nav::before{
   content: ''
 }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .link-buttons{
   position: relative;
   top: 68%;
@@ -114,7 +121,7 @@
  transition: 2s;
 }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   svg{
   position: relative;
   top: 15%;
