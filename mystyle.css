@@ -13,34 +13,58 @@ header{
   margin: 3px;
 }
 #header-nav{
+  display: flex;
+  flex-flow: row;
   margin-bottom: 12px;
   perspective: 2705px;
-  
+  -webkit-box-reflect: below 1px 0 linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3));
 }
 
 .header-button{
   font-size: 2rem;
   font-family: myfont;
-  margin: 3px;
-  width: 12%;
-  height: 57%;
-  margin-left: 17%;
-  margin-top: 2px;
+  margin: 2px;
+  width: 100%;
+  height: 100%;
   color: aqua;
-  -webkit-box-reflect: below 2px 0 linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3));
-  text-shadow: 1px 1px 0px black;
-  background-color: aliceblue;
+  text-shadow: 2px 1px 0px black;
+  background: aliceblue;
+  border-radius: 14%;
+  border: none;
+
+}
+.front{
+  margin-left: 16%;
+  margin-top: 2px;
+  margin-bottom: 4px;
   border: none;
   border-radius: 14%;
+  background: aliceblue;
   transform: rotateY(61deg);
   transition: 2s;
+  z-index: 1;
 }
-
-.header-button:hover {
+.front:hover {
   transform: rotateY(0deg);
   gap: 5px;
   transition: 2s;
 }
+
+.background:hover ::before{
+  content: ' ';
+  border-radius: 12%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background-image:  conic-gradient(darkturquoise 0deg, aliceblue 0deg);
+  animation-name: rotation;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  z-index: -2;
+}
+
 #header-image{
   margin: 3px;
 }
@@ -150,4 +174,225 @@ svg{
 
 footer{
   margin: 3px;
+}
+
+@keyframes rotation{
+  1%{
+    background-image:  conic-gradient(darkturquoise 0deg, aliceblue 0deg);
+  }
+  2%{
+    background-image:  conic-gradient(darkturquoise 10deg, aliceblue 0deg);
+  }
+  3%{
+    background-image:  conic-gradient(darkturquoise 20deg, aliceblue 0deg);
+  }
+  4%{
+    background-image:  conic-gradient(darkturquoise 30deg, aliceblue 0deg);
+  }
+  5%{
+    background-image:  conic-gradient(darkturquoise 40deg, aliceblue 0deg);
+  }
+  6%{
+    background-image:  conic-gradient(darkturquoise 50deg, aliceblue 0deg);
+  }
+  7%{
+    background-image:  conic-gradient(darkturquoise 60deg, aliceblue 0deg);
+  }
+  8%{
+    background-image:  conic-gradient(darkturquoise 70deg, aliceblue 0deg);
+  }
+  9%{
+    background-image:  conic-gradient(darkturquoise 80deg, aliceblue 0deg);
+  }
+  10%{
+    background-image:  conic-gradient(darkturquoise 90deg, aliceblue 0deg);
+  }
+  12%{
+    background-image:  conic-gradient(darkturquoise 100deg, aliceblue 0deg);
+  }
+  13%{
+    background-image:  conic-gradient(darkturquoise 110deg, aliceblue 0deg);
+  }
+  14%{
+    background-image:  conic-gradient(darkturquoise 120deg, aliceblue 0deg);
+  }
+  15%{
+    background-image:  conic-gradient(darkturquoise 130deg, aliceblue 0deg);
+  }
+  16%{
+    background-image:  conic-gradient(darkturquoise 140deg, aliceblue 0deg);
+  }
+  17%{
+    background-image:  conic-gradient(darkturquoise 150deg, aliceblue 0deg);
+  }
+  18%{
+    background-image:  conic-gradient(darkturquoise 160deg, aliceblue 0deg);
+  }
+  19%{
+    background-image:  conic-gradient(darkturquoise 170deg, aliceblue 0deg);
+  }
+  20%{
+    background-image:  conic-gradient(darkturquoise 180deg, aliceblue 0deg);
+  }
+  21%{
+    background-image:  conic-gradient(darkturquoise 190deg, aliceblue 0deg);
+  }
+  22%{
+    background-image:  conic-gradient(darkturquoise 200deg, aliceblue 0deg);
+  }
+  23%{
+    background-image:  conic-gradient(darkturquoise 210deg, aliceblue 0deg);
+  }
+  24%{
+    background-image:  conic-gradient(darkturquoise 220deg, aliceblue 0deg);
+  }
+  25%{
+    background-image:  conic-gradient(darkturquoise 230deg, aliceblue 0deg);
+  }
+  26%{
+    background-image:  conic-gradient(darkturquoise 240deg, aliceblue 0deg);
+  }
+  1
+  27%{
+    background-image:  conic-gradient(darkturquoise 250deg, aliceblue 0deg);
+  }
+  28%{
+    background-image:  conic-gradient(darkturquoise 260deg, aliceblue 0deg);
+  }
+  29%{
+    background-image:  conic-gradient(darkturquoise 270deg, aliceblue 0deg);
+  }
+  30%{
+    background-image:  conic-gradient(darkturquoise 280deg, aliceblue 0deg);
+  }
+  31%{
+    background-image:  conic-gradient(darkturquoise 290deg, aliceblue 0deg);
+  }
+  32%{
+    background-image:  conic-gradient(darkturquoise 300deg, aliceblue 0deg);
+  }
+  33%{
+    background-image:  conic-gradient(darkturquoise 310deg, aliceblue 0deg);
+  }
+  34%{
+    background-image:  conic-gradient(darkturquoise 320deg, aliceblue 0deg);
+  }
+  35%{
+    background-image:  conic-gradient(darkturquoise 330deg, aliceblue 0deg);
+  }
+  36%{
+    background-image:  conic-gradient(darkturquoise 340deg, aliceblue 0deg);
+  }
+  37%{
+    background-image:  conic-gradient(darkturquoise 350deg, aliceblue 0deg);
+  }
+  38%{
+    background-image:  conic-gradient(darkturquoise 360deg, aliceblue 0deg);
+  }
+  
+  48%{
+    background-image:  conic-gradient(darkturquoise 350deg, aliceblue 0deg);
+  }
+  49%{
+    background-image:  conic-gradient(darkturquoise 340deg, aliceblue 0deg);
+  }
+  50%{
+    background-image:  conic-gradient(darkturquoise 330deg, aliceblue 0deg);
+  }
+  51%{
+    background-image:  conic-gradient(darkturquoise 320deg, aliceblue 0deg);
+  }
+  52%{
+    background-image:  conic-gradient(darkturquoise 310deg, aliceblue 0deg);
+  }
+  53%{
+    background-image:  conic-gradient(darkturquoise 300deg, aliceblue 0deg);
+  }
+  54%{
+    background-image:  conic-gradient(darkturquoise 290deg, aliceblue 0deg);
+  }
+  55%{
+    background-image:  conic-gradient(darkturquoise 280deg, aliceblue 0deg);
+  }
+  56%{
+    background-image:  conic-gradient(darkturquoise 270deg, aliceblue 0deg);
+  }
+  57%{
+    background-image:  conic-gradient(darkturquoise 260deg, aliceblue 0deg);
+  }
+  58%{
+    background-image:  conic-gradient(darkturquoise 250deg, aliceblue 0deg);
+  }
+  59%{
+    background-image:  conic-gradient(darkturquoise 240deg, aliceblue 0deg);
+  }
+  60%{
+    background-image:  conic-gradient(darkturquoise 230deg, aliceblue 0deg);
+  }
+  61%{
+    background-image:  conic-gradient(darkturquoise 220deg, aliceblue 0deg);
+  }
+  62%{
+    background-image:  conic-gradient(darkturquoise 210deg, aliceblue 0deg);
+  }
+  63%{
+    background-image:  conic-gradient(darkturquoise 200deg, aliceblue 0deg);
+  }
+  64%{
+    background-image:  conic-gradient(darkturquoise 190deg, aliceblue 0deg);
+  }
+  65%{
+    background-image:  conic-gradient(darkturquoise 180deg, aliceblue 0deg);
+  }
+  66%{
+    background-image:  conic-gradient(darkturquoise 170deg, aliceblue 0deg);
+  }
+  67%{
+    background-image:  conic-gradient(darkturquoise 160deg, aliceblue 0deg);
+  }
+  68%{
+    background-image:  conic-gradient(darkturquoise 150deg, aliceblue 0deg);
+  }
+  69%{
+    background-image:  conic-gradient(darkturquoise 140deg, aliceblue 0deg);
+  }
+  70%{
+    background-image:  conic-gradient(darkturquoise 130deg, aliceblue 0deg);
+  }
+  71%{
+    background-image:  conic-gradient(darkturquoise 120deg, aliceblue 0deg);
+  }
+  72%{
+    background-image:  conic-gradient(darkturquoise 110deg, aliceblue 0deg);
+  }
+  73%{
+    background-image:  conic-gradient(darkturquoise 90deg, aliceblue 0deg);
+  }
+  74%{
+    background-image:  conic-gradient(darkturquoise 80deg, aliceblue 0deg);
+  }
+  75%{
+    background-image:  conic-gradient(darkturquoise 70deg, aliceblue 0deg);
+  }
+  76%{
+    background-image:  conic-gradient(darkturquoise 60deg, aliceblue 0deg);
+  }
+  77%{
+    background-image:  conic-gradient(darkturquoise 50deg, aliceblue 0deg);
+  }
+  78%{
+    background-image:  conic-gradient(darkturquoise 40deg, aliceblue 0deg);
+  }
+  79%{
+    background-image:  conic-gradient(darkturquoise 30deg, aliceblue 0deg);
+  }
+  80%{
+    background-image:  conic-gradient(darkturquoise 20deg, aliceblue 0deg);
+  }
+  81%{
+    background-image:  conic-gradient(darkturquoise 10deg, aliceblue 0deg);
+  }
+  82%{
+    background-image:  conic-gradient(darkturquoise 0deg, aliceblue 0deg);
+  }
 }

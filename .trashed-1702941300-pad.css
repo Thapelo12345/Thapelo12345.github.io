@@ -7,47 +7,20 @@
 }
 @media screen and (min-height: 768px) {
   .header-button{
-  font-size: 4rem;
-  font-family: myfont;
-  margin: 3px;
-  width: 100%;
-  height: 100%;
-  color: aqua;
-  text-shadow: 2px 1px 0px black;
-  background: aliceblue;
-  border-radius: 14%;
-  border: none;
-  }
-}
-
-@media screen and (min-height: 768px) {
-.front{
-  margin-left: 8%;
+  font-size: 4.3rem;
+  width: 16%;
+  height: 95%;
+  margin-left: 13%;
   margin-top: 2px;
-  margin-bottom: 4px;
+  color: aqua;
+  -webkit-box-reflect: below 2px 0 linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3));
+  text-shadow: 1px 1px 0px black;
+  background-color: aliceblue;
   border: none;
   border-radius: 14%;
-  background: aliceblue;
-  transform: rotateY(61deg);
+  transform: rotateY(0deg);
   transition: 2s;
-  z-index: 1;
-}
-}
-
-@media screen and (min-height: 768px) {
-.background:hover ::before{
-  content: ' ';
-  border-radius: 12%;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  background-image:  conic-gradient(darkturquoise 0deg, aliceblue 0deg);
-  animation-name: rotation;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
-  z-index: -2;
+  
 }
 }
 
